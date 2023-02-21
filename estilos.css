@@ -37,6 +37,7 @@ body {
   font-size: 30px;
   text-align: center;
   margin-bottom: 60px;
+  margin-top: 40px;
 }
 
 /* Header */
@@ -47,50 +48,18 @@ header {
   background: #aa4b6b;
   background: -webkit-linear-gradient(
       to right,
-      hsla(188, 44%, 42%, 0.513),
-      hsla(240, 10%, 47%, 0.537),
-      hsla(340, 39%, 48%, 0.532)
+      hsla(188, 44%, 42%, 0.608),
+      hsla(240, 10%, 47%, 0.557),
+      hsla(340, 39%, 48%, 0.552)
     ),
-    url(../Webside/img/home.jpg);
+    url(./img/home.jpg);
   background: linear-gradient(
       to right,
-      hsla(188, 44%, 42%, 0.513),
-      #6b6b8389,
-      hsla(340, 39%, 48%, 0.532)
+      hsla(188, 44%, 42%, 0.608),
+      hsla(240, 10%, 47%, 0.557),
+      hsla(340, 39%, 48%, 0.552)
     ),
-    url(../Webside/img/home.jpg);
-
-  /* background: #00416a; 
-  background: -webkit-linear-gradient(
-      to right,
-      hsla(53, 100%, 50%, 0.357),
-      hsla(76, 86%, 34%, 0.365),
-      hsla(203, 100%, 21%, 0.307)
-    ),
-    url(../Webside/img/home.jpg);
-  background: linear-gradient(
-      to right,
-      hsla(53, 100%, 50%, 0.357),
-      hsla(76, 86%, 34%, 0.365),
-      hsla(203, 100%, 21%, 0.307)
-    ),
-    url(../Webside/img/home.jpg); */
-
-  /* background: #544a7d;
-
-  background: -webkit-linear-gradient(
-      to right,
-      hsla(45, 100%, 66%, 0.548),
-      hsla(252, 26%, 39%, 0.776)
-    ),
-    url(../Webside/img/home.jpg);
-
-  background: linear-gradient(
-      to right,
-      hsla(45, 100%, 66%, 0.548),
-      hsla(252, 26%, 39%, 0.776)
-    ),
-    url(../Webside/img/home.jpg); */
+    url(./img/home.jpg);
 
   background-size: cover;
   background-attachment: fixed;
@@ -110,8 +79,7 @@ nav > a {
 }
 
 nav > a:hover {
-  /* text-decoration: underline; */
-  color: var(--red);
+  text-decoration: underline;
 }
 
 header .textos-header {
@@ -122,6 +90,7 @@ header .textos-header {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  padding: 13%;
 }
 
 .textos-header h1 {
@@ -133,6 +102,7 @@ header .textos-header {
   font-size: 30px;
   font-weight: 300;
   color: var(--white);
+  padding-top: 4%;
 }
 
 .wave {
@@ -142,26 +112,12 @@ header .textos-header {
 }
 
 
-
-
-header .icons a {
-  font-size: 2rem;
-  color: var(--white);
-  margin-left: 2rem;
-}
-
-
-header .icons a:hover {
-  color: var(--red);
-}
-
-
-
 /* About us */
 
 main .sobre-nosotros {
   padding: 20px 0 60px 0;
 }
+
 .contenedor-sobre-nosotros {
   display: flex;
   justify-content: space-evenly;
