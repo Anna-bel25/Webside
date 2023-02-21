@@ -1,0 +1,232 @@
+:root {
+  --green: #3d8d99;
+  --blue: #6c6c84;
+  --blue-bk: #4a4a76;
+  --red: #aa4b6b;
+  --white: #f9f7f7;
+  --green-trans: #3d8d99a4;
+  --blue-trans: #6c6c84b9;
+  --red-trans: #aa4b6bc7;
+  --a: #4c4c4f;
+  --b: #444444;
+  --c: #282b28;
+  --d: #ccc;
+  --e: #9f9a9a;
+  --bkportfolio: #f2f2f2;
+  /* desenfoque blur */
+  --blur: blur(10px);
+  --button-hover-color: hsla(0, 2%, 12%, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--green-trans);
+  color: var(--d);
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body::after,
+body::before {
+  content: "";
+  position: fixed;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(150px);
+  opacity: 0.5;
+}
+
+body::before {
+  background-color: var(--red);
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%);
+}
+
+body::after {
+  background-color: var(--blue-bk);
+  right: 0;
+  top: 0;
+  transform: translate(50%);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.gradient_text {
+  background: linear-gradient(to right, var(--red), var(--blue-bk));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.form_main {
+  min-height: 100vh;
+  padding: 60px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.form_content {
+  /* width: 100%; */
+  width: 50%;
+  height: 80%;
+  min-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+.form_content .circle_3,
+.form_content .circle_2,
+.form_content .circle_1 {
+  position: absolute;
+  background: linear-gradient(to right, var(--red), var(--blue-bk));
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.form_content .circle_1 {
+  height: 120px;
+  width: 120px;
+  left: 0;
+  top: 10%;
+  transform: translateX(-50%);
+}
+
+.form_content .circle_2 {
+  height: 80px;
+  width: 80px;
+  right: 0;
+  bottom: 10%;
+  transform: translate(20%, 20%);
+}
+
+.form_content .circle_3 {
+  height: 50px;
+  width: 50px;
+  right: 10%;
+  top: 10%;
+  /* transform: translateY(-50%); */
+}
+
+.form_content .box {
+  border-color: var(--a);
+  border: 1px solid var(--e);
+  padding: 40px 50px;
+  border-radius: 20px;
+  backdrop-filter: var(--blur);
+}
+
+.form_content h3 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--a);
+  font-weight: 3rem;
+}
+
+.form_content form {
+  margin: 25px 0 20px;
+}
+
+.form_content .input_box {
+  margin-bottom: 25px;
+  /* margin: 25px; */
+}
+
+.form_content ::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.form_content .input_control {
+  display: block;
+  height: 45px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--b);
+  color: var(--a);
+  font-weight: 2rem;
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+
+.form_content .input_control:focus {
+  outline: none;
+}
+
+.form_content .input_link {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.form_content .btn {
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: "Montserrat";
+  cursor: pointer;
+  border-radius: 25px;
+  user-select: none;
+  background: linear-gradient(to right, var(--red), var(--blue-bk));
+  border: none;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.form_content .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: -1;
+}
+
+.form_content .btn:hover::before {
+  background-color: var(--button-hover-color);
+}
+
+.form_content p {
+  text-align: center;
+  color: var(--a);
+}
+
+@media (max-widht: 575px) {
+  body::after,
+  body::before {
+    height: 250px;
+    width: 250px;
+    filter: blur(100px);
+  }
+
+  .form_content .box {
+    padding: 30px;
+  }
+
+  .form_content h3 {
+    font-size: 24px;
+  }
+}

@@ -110,7 +110,8 @@ nav > a {
 }
 
 nav > a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: var(--red);
 }
 
 header .textos-header {
@@ -139,6 +140,22 @@ header .textos-header {
   bottom: 0;
   width: 100%;
 }
+
+
+
+
+header .icons a {
+  font-size: 2rem;
+  color: var(--white);
+  margin-left: 2rem;
+}
+
+
+header .icons a:hover {
+  color: var(--red);
+}
+
+
 
 /* About us */
 
